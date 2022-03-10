@@ -38,5 +38,70 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
     "accent-img": "http://localhost:9000/img/accent.png",
   },
 };
+// initialize variables
+
+const logoImg = document.querySelector('#logo-img')
+const ctaImg = document.querySelector('#cta-img')
+const accentImg = document.querySelector('#middle-img')
+
+//images
+logoImg.src = siteContent.images['logo-img']
+ctaImg.src = siteContent.images['cta-img']
+accentImg.src = siteContent.images['accent-img']
+
+//footer
+const footerLink = document.querySelector('footer a')
+footerLink.textContent = siteContent.footer.copyright
+footerLink.classList.add('bold')
+
+//contact
+const contact = document.querySelector('section.contact')
+contact.children[0].textContent = siteContent.contact['contact-h4']
+contact.children[1].textContent = siteContent.contact['address']
+contact.children[2].textContent = siteContent.contact['phone']
+contact.children[3].textContent = siteContent.contact['email']
+
+
+//top content
+const topContent = document.querySelector('.top-content')
+topContent.children[0].children[0].textContent = siteContent["main-content"]['features-h4']
+topContent.children[0].children[1].textContent = siteContent['main-content']['features-content']
+topContent.children[1].children[0].textContent = siteContent['main-content']['about-h4']
+topContent.children[1].children[1].textContent = siteContent['main-content']['about-content']
+
+
+//bottom content
+const bottomContent = document.querySelector('.bottom-content')
+bottomContent.children[0].children[0].textContent = siteContent['main-content']['services-h4']
+bottomContent.children[0].children[1].textContent = siteContent['main-content']['services-content']
+bottomContent.children[1].children[0].textContent = siteContent['main-content']['product-h4']
+bottomContent.children[1].children[1].textContent = siteContent['main-content']['product-content']
+bottomContent.children[2].children[0].textContent = siteContent['main-content']['vision-h4']
+bottomContent.children[2].children[1].textContent = siteContent['main-content']['vision-content']
+
+
+//CTA
+document.querySelector('.cta h1').textContent = siteContent.cta['h1']
+document.querySelector('.cta button').textContent = siteContent.cta['button']
+
+//links
+
+const links = document.querySelectorAll('header nav a')
+const realNavLinks = Object.values(siteContent.nav)
+
+links[0].textContent = realNavLinks[0]
+links[1].textContent = realNavLinks[1]
+links[2].textContent = realNavLinks[2]
+links[3].textContent = realNavLinks[3]
+links[4].textContent = realNavLinks[4]
+links[5].textContent = realNavLinks[5]
+links[0].classList.add('italic')
+links[1].classList.add('italic')
+links[2].classList.add('italic')
+links[3].classList.add('italic')
+links[4].classList.add('italic')
+links[5].classList.add('italic')
+
+
 
 console.log('project wired!')
